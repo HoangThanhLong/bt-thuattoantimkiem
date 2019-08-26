@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HI</title>
+</head>
+<body>
++84.<input type="text" id="phone">
+<input type="button" value="Kiểm tra" onclick="phoneNumber()">
+<script>
+    function phoneNumber() {
+        num = parseInt(document.getElementById('phone').value);
+        let regexp = /^\(\d{2}\)-\(\d{9}\)$/;
+        let regexp1 = /^96[0-9]([0-9]{6})$/;
+        let regexp2 = /^98[0-9]([0-9]{6})$/;
+        if (regexp.test(num)|| regexp1.test(num)|| regexp2.test(num)){
+            alert("Đây là số viettel");
+        } else {
+            alert("Đây không phải là số viettel");
+        }
+    }
+</script>
+</body>
+</html>
